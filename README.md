@@ -20,9 +20,13 @@ Run the ```nmap-db.py``` with the following command ```python3 nmap-db.py```.
 
 This will prompt for user input on which IP/s you'd like to scan.
 
-Once it's finished, a Flask server will pull the information from the SQLite3 database and host it in HTML format.
+The nmap.xml results will be placed into the SQLite3 nmap.database.
 
-Go to the following address when it says ```http://127.0.0.1:5000```
+Then, Flask will pull the information from the SQLite3 database and host it in HTML format.
+
+The ```/templates``` directory has an index.html that gets called and is needed by default for Flask.
+
+After, you can go to the following address ```http://127.0.0.1:5000```
 
 Like I said before, this is a running project. I plan on building my own type of dashboard using SQLite3's database.
 
