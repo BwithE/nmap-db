@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nmap Results</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .table-container {
+            width: 70%;
+            margin: 20px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #555;
+        }
+
+        form {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        input {
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        /* Updated styling for the button with a white border */
+        button {
+            color: #fff;
+            border: 2px solid #fff;
+            background-color: #000;  /* Added background color to maintain the dark theme */
+            padding: 5px 10px;  /* Adjusted padding for a better appearance */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Nmap Results</h2>
+
+    <!-- Search form -->
+    <form action="/" method="get">
+        <label for="search_input">Search:</label>
+        <input type="text" id="search_input" name="search" placeholder="Enter search query" value="{{ search_query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Nmap Results table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>IP Address</th>
+                    <th>Port</th>
+                    <th>Service</th>
+                    <th>Protocol</th>
+                    <th>Version</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in nmap_results %}
+                    <tr>
+                        <td>{{ result[0] }}</td>
+                        <td>{{ result[1] }}</td>
+                        <td>{{ result[2] }}</td>
+                        <td>{{ result[3] }}</td>
+                        <td>{{ result[4] }}</td>
+                        <td>{{ result[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
