@@ -3,7 +3,12 @@
 
 (I'm running this inside of a Ubuntu VM)
 
-First, we need to clone the repo.
+Tools needed:
+```sudo apt install python3 python3-pip nmap git -y ```
+DONT FORGET FLASK
+```pip install Flask```
+
+Then, we need to clone the repo.
 
 ```git clone https://github.com/bwithe/nmap-db```
 
