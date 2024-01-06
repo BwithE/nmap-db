@@ -1,6 +1,8 @@
 # Nmap injected into SQLite3 database that's shown in an HTML format
 !!! This is a running project. !!!!
 
+(I'm running this inside of a Ubuntu VM)
+
 First, we need to clone the repo.
 
 ```git clone https://github.com/bwithe/nmap-db```
