@@ -1,5 +1,5 @@
 # Nmap injected into SQLite3 database that's shown in an HTML format
-!!! This is a running project. !!!!
+!!! This is a running project !!!!
 
 ![image](https://github.com/BwithE/nmap-db/assets/144924113/5ebe5cbe-ebda-4008-baaa-790b490a00b2)
 
