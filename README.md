@@ -52,24 +52,30 @@ The search functionality is implemented by passing a search query via the URL pa
 
 The web application dynamically updates the displayed results based on the search query.
 
-#User Interaction:
+# User Interaction:
 
 After defining the functions and setting up the web application, the script prompts the user to input a comma-separated list of IP addresses to scan.
 
 It then initiates the Nmap scan and database population process using the provided IP addresses.
 
-#Cleanup:
+# Cleanup:
 
 Once the Flask web application is stopped (usually by closing the browser), the script removes the temporary files (scan.xml and nmap.db) created during the scanning and database population process.
 
 # Usage:
 
 Execute the script in a Python environment.
+
 Input a comma-separated list of IP addresses to scan when prompted.
+
 The script will perform Nmap scans on the specified IP addresses, store the results in a SQLite database, and launch a Flask web application.
+
 Open a web browser and navigate to http://127.0.0.1:5000/ to view the scan results.
+
 Optionally, search for specific IP addresses or service names using the search functionality provided in the web interface.
+
 Once done, close the browser to stop the Flask application.
+
 The script will automatically clean up temporary files generated during the scanning process.
 
 
